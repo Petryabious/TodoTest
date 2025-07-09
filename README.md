@@ -4,4 +4,4 @@
 
 ## Проект залил на githubPages и доступен для проверки по этой ссылке
 
-[TODO app](https://petryabious.github.io/TodoTestPage/)
+## [Ссылка на проект](https://petryabious.github.io/TodoTestPage/)
