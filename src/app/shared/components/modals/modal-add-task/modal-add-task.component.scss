@@ -1,0 +1,39 @@
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  width: 25rem;
+}
+.input,
+.textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  span {
+    font-size: 1.2rem;
+    color: var(--black-color);
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  input,
+  textarea {
+    border: none;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border-bottom: 2px solid var(--black-color);
+    color: var(--black-color);
+    width: 100%;
+  }
+
+  .error {
+    color: red;
+  }
+}
+.textarea {
+  textarea {
+    resize: none;
+    min-height: 5rem;
+  }
+}

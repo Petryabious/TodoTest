@@ -1,0 +1,38 @@
+<div class="task-detail">
+  <header class="task-detail__header">
+    <button routerLink="/tasks" class="btn-back">Назад</button>
+    <h1 class="title-2">Описание</h1>
+  </header>
+
+  @if (task()) {
+  <div class="task-detail__description">
+    <ul class="task-detail__list">
+      <li>
+        <span>Название:</span>
+        <span>{{ task()?.title }}</span>
+      </li>
+      <li>
+        <span>Статус:</span>
+        <span>{{ task()?.status | taskStatus }}</span>
+      </li>
+
+      <li>
+        <span>Описание:</span>
+        <p>
+          {{ task()?.description }}
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <footer class="task-detail__footer">
+    <button (click)="showChangeStatusModal()">Изменить статус</button>
+  </footer>
+  }
+</div>
+
+<app-modal-change-status
+  [(isOpen)]="displayChangeStatusModal"
+  [selectedStatus]="task()?.status ?? ''"
+  (changeStatus)="changeStatus($event)"
+></app-modal-change-status>

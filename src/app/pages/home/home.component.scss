@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  height: 100dvh;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  height: 100%;
+}

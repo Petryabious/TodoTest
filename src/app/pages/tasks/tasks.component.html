@@ -1,0 +1,15 @@
+<div class="tasks">
+  <header class="tasks__header">
+    <h1 class="title-1">Список задач</h1>
+    <app-nav></app-nav>
+  </header>
+
+  <app-modal-add-task [(isOpen)]="displayAddModal"></app-modal-add-task>
+
+  <div class="tasks__btns">
+    <button class="add-task-btn" (click)="showAddModal()">Добавить</button>
+  </div>
+  <div class="tasks__wrapper">
+    <app-tasks-list></app-tasks-list>
+  </div>
+</div>

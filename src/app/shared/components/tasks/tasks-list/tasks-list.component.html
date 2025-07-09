@@ -1,0 +1,15 @@
+<div class="tasks__list">
+  @for (item of tasks(); track item.id) {
+  <app-tasks-item
+    [task]="item"
+    (deleteTask)="showDeleteModal($event)"
+  ></app-tasks-item>
+  } @empty {
+  <p class="tasks__list-empty">Добавьте задачу</p>
+  }
+</div>
+
+<app-modal-delete-task
+  [(isOpen)]="displayDeleteModal"
+  (deleteTask)="deleteTask()"
+></app-modal-delete-task>
